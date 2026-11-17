@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — NovaWorks AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header id="navbar" class="navbar"></header>
+<main class="container" style="padding-top:2rem;padding-bottom:3rem;">
+  <div class="page-header">
+    <h1 id="pageTitle">Dashboard</h1>
+    <p id="pageSubtitle" class="text-muted"></p>
+  </div>
+  <div class="stats-row" id="statsRow">
+    <div class="stat-card"><span class="stat-value" id="statProjects">0</span><span class="stat-label">Total Projects</span></div>
+    <div class="stat-card"><span class="stat-value" id="statTasks">0</span><span class="stat-label">Total Tasks</span></div>
+    <div class="stat-card"><span class="stat-value" id="statHours">0</span><span class="stat-label">Estimated Hours</span></div>
+  </div>
+  <div id="transcriptPanel" class="transcript-panel" style="display:none;">
+    <h2>✦ Create from Transcript</h2>
+    <p class="text-muted mt-1">Paste a meeting transcript and let the AI create projects and tasks automatically.</p>
+    <div class="form-group mt-3">
+      <label for="transcriptInput">Meeting Transcript</label>
+      <textarea id="transcriptInput" rows="8" placeholder="Paste your meeting transcript here…"></textarea>
+    </div>
+    <div class="transcript-actions">
+      <button class="btn btn-primary" id="createBtn">✦ Create from Transcript</button>
+      <button class="btn btn-secondary" id="loadSampleBtn">Load Sample</button>
+      <button class="btn btn-secondary" id="clearBtn">Clear</button>
+    </div>
+    <div id="transcriptWarning" class="banner banner-warning" role="alert" style="display:none;"><span>⚠</span><span>Please paste a transcript before clicking Create.</span></div>
+    <div class="ai-panel" id="aiPanel">
+      <h4 style="margin-bottom:0.75rem;color:var(--accent);">AI Processing…</h4>
+      <div class="shimmer-bar" id="shimmerBar"></div>
+      <div id="aiSteps"></div>
+    </div>
+    <div id="successBanner" class="banner" role="alert"></div>
+    <div id="errorBanner" class="banner" role="alert"></div>
+  </div>
+  <div id="projectsSection">
+    <div class="flex-between mb-2"><h2 id="projectsHeading">Projects</h2></div>
+    <div id="projectsLoading" class="empty-state"><div class="spinner" style="margin:0 auto;width:32px;height:32px;"></div><p class="text-muted mt-2">Loading projects…</p></div>
+    <div id="projectsEmpty" class="empty-state" style="display:none;"><span class="empty-icon">📋</span><h3>No projects yet</h3><p>Use the transcript panel above to have the AI create your first projects.</p></div>
+    <div class="cards-grid" id="cardsGrid" style="display:none;"></div>
+  </div>
+</main>
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
