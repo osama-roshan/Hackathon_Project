@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — NovaWorks AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="login-page">
+  <div class="bg-circles"><div class="bg-circle bg-circle-1"></div><div class="bg-circle bg-circle-2"></div><div class="bg-circle bg-circle-3"></div></div>
+  <div class="login-card">
+    <div class="login-logo"><h1>NovaWorks AI</h1><p>Project Manager — Hackathon Demo</p></div>
+    <div id="loginBanner" class="banner" role="alert"></div>
+    <form id="loginForm" novalidate>
+      <div class="flex-col gap-2">
+        <div class="form-group"><label for="email">Email address</label><input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required /></div>
+        <div class="form-group"><label for="password">Password</label><input type="password" id="password" name="password" placeholder="••••••••" autocomplete="current-password" required /></div>
+        <button type="submit" class="btn btn-primary w-full mt-2" id="loginBtn">Login</button>
+      </div>
+    </form>
+    <div class="demo-box">
+      <h4>Demo accounts (password: Demo123!)</h4>
+      <div style="margin-bottom:0.4rem;"><span style="font-size:0.72rem;color:var(--text-muted);">ADMIN: </span><span class="demo-email" data-email="admin@novaworks.example">admin@novaworks.example</span></div>
+      <div style="margin-bottom:0.4rem;"><span style="font-size:0.72rem;color:var(--text-muted);">MANAGER: </span><span class="demo-email" data-email="ayesha@novaworks.example">ayesha@</span><span class="demo-email" data-email="bilal@novaworks.example">bilal@</span><span class="demo-email" data-email="hina@novaworks.example">hina@</span></div>
+      <div><span style="font-size:0.72rem;color:var(--text-muted);">AGENT: </span><span class="demo-email" data-email="ali@novaworks.example">ali@</span><span class="demo-email" data-email="hamza@novaworks.example">hamza@</span><span class="demo-email" data-email="sara@novaworks.example">sara@</span><span class="demo-email" data-email="usman@novaworks.example">usman@</span><span class="demo-email" data-email="zain@novaworks.example">zain@</span><span class="demo-email" data-email="maryam@novaworks.example">maryam@</span></div>
+      <p class="text-muted mt-1" style="font-size:0.72rem;">All accounts end in <em>novaworks.example</em></p>
+    </div>
+  </div>
+</div>
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
