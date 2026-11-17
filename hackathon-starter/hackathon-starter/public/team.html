@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team — NovaWorks AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header id="navbar" class="navbar"></header>
+<main class="container" style="padding-top:2rem;padding-bottom:3rem;">
+  <div class="page-header">
+    <h1>Team Directory</h1>
+    <p class="text-muted">All NovaWorks team members.</p>
+  </div>
+  <div id="teamLoading" class="empty-state">
+    <div class="spinner" style="margin:0 auto;width:32px;height:32px;"></div>
+    <p class="text-muted mt-2">Loading team…</p>
+  </div>
+  <div id="teamEmpty" class="empty-state" style="display:none;">
+    <span class="empty-icon">👥</span>
+    <h3>No team members found</h3>
+    <p>Team members will appear here once the backend is connected.</p>
+  </div>
+  <div class="cards-grid" id="teamGrid" style="display:none;"></div>
+</main>
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/team.js"></script>
+</body>
+</html>
