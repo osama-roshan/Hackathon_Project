@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project — NovaWorks AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header id="navbar" class="navbar"></header>
+<main class="container" style="padding-top:2rem;padding-bottom:3rem;">
+  <div style="margin-bottom:1.25rem;">
+    <button class="btn btn-secondary btn-sm" data-nav="dashboard.html">← Back to Dashboard</button>
+  </div>
+  <div id="pageLoading" class="empty-state">
+    <div class="spinner" style="margin:0 auto;width:32px;height:32px;"></div>
+    <p class="text-muted mt-2">Loading project…</p>
+  </div>
+  <div id="accessDenied" class="access-denied" style="display:none;">
+    <h2>🔒 Access Denied</h2>
+    <p class="text-muted">You do not have access to this project.</p>
+    <button class="btn btn-secondary mt-3" data-nav="dashboard.html">Return to Dashboard</button>
+  </div>
+  <div id="projectContent" style="display:none;">
+    <div class="detail-header" id="projectHeader"></div>
+    <h2 style="margin-bottom:1rem;">Tasks</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Description</th>
+            <th>Assigned To</th>
+            <th>Deadline</th>
+            <th style="text-align:right;">Hours</th>
+          </tr>
+        </thead>
+        <tbody id="tasksBody"></tbody>
+      </table>
+    </div>
+    <div class="hours-total" id="hoursTotal"></div>
+  </div>
+</main>
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/project.js"></script>
+</body>
+</html>
